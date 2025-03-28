@@ -1,0 +1,23 @@
+INPUT SENTENCE: He is a nigga and his wife is a bitch
+
+CATEGORY: Race/Ethnicity related cyberbullying
+
+SUGGESTED ALTERNATIVES:
+
+1. He and his wife are unpleasant people.
+2. I have some concerns about their behavior.
+
+
+HARMFUL CONTENT IDENTIFICATION:
+
+ 🔴nigga
+ 🔴bitch
+
+
+TOTAL WORDS: 10
+
+FLAGGED PERCENTAGE: 20% (2 Harmful Words / 10 Total Words)
+
+REASON:
+
+The sentence contains racial slurs (nigga) and a gendered insult (bitch), directed at individuals, constituting racial and gendered cyberbullying.

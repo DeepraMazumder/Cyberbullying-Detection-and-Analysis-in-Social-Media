@@ -1,0 +1,30 @@
+@startuml
+skinparam direction left to right
+
+:              DATASET
+
+100k Social Media Tweets;
+
+:                      EXPLORATORY DATA ANALYSIS
+
+Class distribution plot, word cloud, tweet length analysis;
+
+:                               DATA PRE - PROCESSING
+Text cleaning, removing stop words, special characters, emojis;
+
+:                          DATA PREPARATION
+
+Label Encoding, Train-Test Split, TF-IDF Vectorization;
+
+:                                                 MODEL TRAINING
+
+Random Forest, Naive Bayes, SVM - OvO & OvR, XGBoost, LightGBM, CatBoost;
+
+:                                     MODEL EVALUATION
+
+Accuracy, Precision, Recall, F1 Score, Confusion Matrix, ROC Curves;
+
+:         OUTPUT
+
+Sample Predictions;
+@enduml
