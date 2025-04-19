@@ -22,8 +22,12 @@ def count_words(text):
 def analyze_cyberbullying(text):
     total_words = count_words(text)
     prompt = (
-        "Classify the given sentence into one of the following cyberbullying CATEGORIES: Race/Ethnicity related cyberbullying, "
-        "Gender/Sexual related cyberbullying, Religion related cyberbullying, or Other form of cyberbullying\n"
+        "Classify the given sentence into one of the following cyberbullying SUB CATEGORIES: Race/Ethnicity related cyberbullying, "
+        "Gender/Sexual related cyberbullying, Religion related cyberbullying, Harassment, Flaming/Trolling, Dissing."
+        "IF the SUB CATEGORY is Race/Ethnicity related cyberbullying, Gender/Sexual related cyberbullying, or Religion related cyberbullying, "
+        "then write the CATEGORY as Identity-Based Cyberbullying."
+        "IF the SUB CATEGORY is Harassment, Flaming/Trolling, or Dissing, then write the CATEGORY as Behavioral-Based Cyberbullying."
+        "Write CATEGORY first, then SUB CATEGORY."
         "If the sentence is not cyberbullying, respond with 'Not Cyberbullying'\n"
         "SUGGESTED ALTERNATIVES: Suggest only 2 neutral/safer ways to express the sentence - no yapping\n"
         "HARMFUL CONTENT IDENTIFICATION: Display only the individual harmful words from the sentence as a list, "
