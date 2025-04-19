@@ -1,77 +1,81 @@
-import streamlit as st 
-import sys
+import streamlit as st
+from Analysis import analyze_cyberbullying  # Make sure analysis.py is in the root directory
 
-# Add the module path
-sys.path.append("Artifacts")
+# Page config
+st.set_page_config(page_title="SocialDefend", layout="centered", initial_sidebar_state="collapsed")
 
-# Import the analyze_cyberbullying function
-from CyberbullyingSummarisation import analyze_cyberbullying
-
-# Apply custom CSS for alignment
-st.markdown(
-    """
+# Custom CSS styling
+st.markdown("""
     <style>
-    /* Center align title & description */
-    .title {
-        text-align: center;
-        font-size: 2em;
-        font-weight: bold;
-    }
-    .description {
-        text-align: center;
-        font-size: 1.2em;
-    }
-    
-    /* Left align text inside the input box */
-    .stTextArea textarea {
-        text-align: left;
-    }
-    
-    /* Left align analysis result */
-    .analysis-result {
-        text-align: left;
-    }
-    
-    /* Right align buttons */
-    .button-container {
-        display: flex;
-        justify-content: flex-end;
-    }
-    .stButton>button, .stDownloadButton>button {
-        margin-left: auto;
-    }
+        [data-testid="stAppViewContainer"] {
+            background-image: url('https://images.pexels.com/photos/355770/pexels-photo-355770.jpeg'); /* Set the background image */
+            background-size: cover; /* Make sure the background covers the entire page */
+            background-position: top center; /* Align image to the top */
+            background-repeat: no-repeat; /* Prevent repeating the image */
+            color: white; /* Set text color to white for visibility */
+        }
+        .stTextInput>div>div>input {
+            background-color: #1e293b;
+            color: white;
+        }
+
+        .stButton>button {
+            font-size: 16px;
+            padding: 10px 25px;
+            margin: 10px auto;
+            display: block;
+        }
+
+        .stMarkdown, .stTextInput, .stButton, .stSuccess, .stInfo {
+            color: white !important;
+        }
+            
+        h1, h3 {
+            color: black !important;
+        }
+
+        body {
+            background-color: #0f172a;
+        }
+
+        /* Custom background for analysis result */
+        .safe {
+            background-color: #008000; /* Green */
+            padding: 20px;
+            border-radius: 8px;
+            color: white;
+        }
+
+        .unsafe {
+            background-color: #cc0000; /* Red */
+            padding: 20px;
+            border-radius: 8px;
+            color: white;
+        }
     </style>
-    """,
-    unsafe_allow_html=True
-)
+""", unsafe_allow_html=True)
 
-# Streamlit UI
-st.markdown('<h1 class="title">Cyberbullying Detection and Analysis</h1>', unsafe_allow_html=True)
+# Title
+st.markdown("<h1 style='text-align: center; font-size: 40px;'>Cyberbullying Detection and Analysis</h1>", unsafe_allow_html=True)
+st.write("")
 
-# User Input
-user_input = st.text_area("Enter a sentence to check for cyberbullying content:")
+# Input field
+sentence = st.text_area(" ", placeholder="Enter a sentence...", height=100, label_visibility="collapsed")
 
-if st.button("Analyse"):
-    if user_input.strip():
-        # Analyze the input sentence
-        result = analyze_cyberbullying(user_input)
+# Single merged button
+analyze_button = st.button("Prediction & Analysis")
 
-        # Display result (left-aligned)
-        st.markdown('<h3>Analysis Result:</h3>', unsafe_allow_html=True)
-        st.markdown(f'<div class="analysis-result">{result}</div>', unsafe_allow_html=True)
-
-        # Prepare analysis content for download
-        analysis_content = f"INPUT SENTENCE: {user_input}\n\n{result}"
-        analysis_file = "analysis.txt"
-
-        # Right-align buttons
-        st.markdown('<div class="button-container">', unsafe_allow_html=True)
-        st.download_button(
-            label="Download Analysis",
-            data=analysis_content,
-            file_name=analysis_file,
-            mime="text/plain"
-        )
-        st.markdown('</div>', unsafe_allow_html=True)
+# Logic
+if analyze_button:
+    if not sentence.strip():
+        st.error("⚠️ No sentence found!")
     else:
-        st.warning("Please enter a sentence before analyzing!")
+        output = analyze_cyberbullying(sentence)
+        
+        # Check if output contains "Not Cyberbullying" or "Cyberbullying"
+        if "Not cyberbullying" in output:
+            st.markdown("### 🔍 Analysis Result")
+            st.markdown(f'<div class="safe">{output}</div>', unsafe_allow_html=True)
+        else:
+            st.markdown("### 🔍 Analysis Result")
+            st.markdown(f'<div class="unsafe">{output}</div>', unsafe_allow_html=True)
