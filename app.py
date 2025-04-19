@@ -14,12 +14,21 @@ st.markdown("""
             background-repeat: no-repeat; /* Prevent repeating the image */
             color: white; /* Set text color to white for visibility */
         }
+            
+        .stTextArea>div>textarea::placeholder {
+            color: white;
+            background-color: black;
+        }
+            
         .stTextInput>div>div>input {
-            background-color: #1e293b;
+            background-color: black;
             color: white;
         }
 
         .stButton>button {
+            background-color: black;
+            color: white;
+            border: none;
             font-size: 16px;
             padding: 10px 25px;
             margin: 10px auto;
