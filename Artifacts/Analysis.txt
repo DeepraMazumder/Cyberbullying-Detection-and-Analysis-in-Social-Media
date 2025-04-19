@@ -1,19 +1,17 @@
 INPUT SENTENCE: He is a silly black African
 
-CATEGORY: Identity-Based Cyberbullying
-SUB CATEGORY: Race/Ethnicity related cyberbullying
+CATEGORY: Race/Ethnicity
+TYPE: Identity-based
 
 SUGGESTED ALTERNATIVES:
-1. He is silly.
-2. He is foolish.
+1. He's a bit naive.
+2. He's quite playful.
 
 HARMFUL CONTENT IDENTIFICATION:
 🔴 black
 🔴 African
 
 TOTAL WORDS: 6
-
 FLAGGED PERCENTAGE: 33% (2 Harmful Words / 6 Total Words)
 
-REASON:
-The sentence uses racial identifiers as insults, targeting the person's race and ethnicity.  This constitutes identity-based cyberbullying.
+REASON:The sentence uses racial identifiers to insult and demean the person.  This is a clear case of race-based cyberbullying.

@@ -1,18 +1,17 @@
 import streamlit as st
+from Analysis import analyze_cyberbullying  # Make sure analysis.py is in the root directory
 
-# Set page config
+# Page config
 st.set_page_config(page_title="Cyberbullying Detection", layout="centered", initial_sidebar_state="collapsed")
 
-# ✅ Custom CSS styling (No background)
+# Custom CSS styling
 st.markdown("""
     <style>
-        /* Input field styling */
         .stTextInput>div>div>input {
             background-color: #1e293b;
             color: white;
         }
 
-        /* Button styling */
         .stButton>button {
             font-size: 16px;
             padding: 10px 25px;
@@ -20,12 +19,10 @@ st.markdown("""
             display: block;
         }
 
-        /* Optional: Set text color globally */
-        h1, .stMarkdown, .stTextInput, .stButton, .stDownloadButton, .stSuccess, .stInfo {
+        h1, .stMarkdown, .stTextInput, .stButton, .stSuccess, .stInfo {
             color: white !important;
         }
 
-        /* Page background color (optional) */
         body {
             background-color: #0f172a;
         }
@@ -36,18 +33,19 @@ st.markdown("""
 st.markdown("<h1 style='text-align: center; font-size: 40px;'>Cyberbullying Detection and Analysis</h1>", unsafe_allow_html=True)
 st.write("")
 
-# Text input
+# Input field
 sentence = st.text_area(" ", placeholder="Enter a sentence...", height=100, label_visibility="collapsed")
 
-# Center both buttons
-predict_button = st.button("Prediction")
-advanced_button = st.button("Analysis")
+# Single merged button
+analyze_button = st.button("Prediction & Analysis")
 
-# Output and logic
-prediction = ""
-
-if predict_button:
-    prediction = "Cyberbullying" if "hate" in sentence.lower() else "Safe"
-    st.success(f"Prediction: ✅ {prediction}")
-elif advanced_button:
-    st.info("Advanced analysis module coming soon...")
+# Logic
+if analyze_button:
+    if not sentence.strip():
+        st.error("⚠️ No sentence found!")
+    else:
+        output = analyze_cyberbullying(sentence)
+        st.markdown("---")
+        st.markdown("### 🔍 Analysis Result")
+        st.markdown(f'<div class="wrapped-text">{output}</div>', unsafe_allow_html=True)
+        
