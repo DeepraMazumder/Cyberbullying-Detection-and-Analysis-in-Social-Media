@@ -25,4 +25,6 @@ transformers
 # Model Saving and Utilities
 joblib
 wget
+
 python-dotenv
+google-generativeai
