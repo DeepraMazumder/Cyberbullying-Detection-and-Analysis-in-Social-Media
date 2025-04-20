@@ -9,22 +9,34 @@ st.markdown("""
     <style>
         [data-testid="stAppViewContainer"] {
             background-image: url('https://images.pexels.com/photos/355770/pexels-photo-355770.jpeg'); /* Set the background image */
-            background-size: cover; /* Make sure the background covers the entire page */
-            background-position: top center; /* Align image to the top */
-            background-repeat: no-repeat; /* Prevent repeating the image */
-            color: white; /* Set text color to white for visibility */
-        }
-            
-        .stTextArea>div>textarea::placeholder {
+            background-size: cover;
+            background-position: top center;
+            background-repeat: no-repeat;
             color: white;
-            background-color: black;
         }
-            
+
+        /* Style for the text area input */
+        .stTextArea textarea {
+            background-color: black !important;
+            color: white !important;
+            border: none !important;         /* Removes the border */
+            box-shadow: none !important;     /* Removes the shadow */
+            outline: none !important;        /* Removes focus outline */
+            border-radius: 4px;              /* Optional: keep some smooth corners */
+            padding: 10px;                   /* Optional: better spacing inside the box */
+        }
+        
+        .stTextArea textarea::placeholder {
+            color: white !important;
+        }
+
+        /* Optional: Style text inputs if used elsewhere */
         .stTextInput>div>div>input {
             background-color: black;
             color: white;
         }
 
+        /* Style for button */
         .stButton>button {
             background-color: black;
             color: white;
@@ -35,10 +47,11 @@ st.markdown("""
             display: block;
         }
 
+        /* General text and component colors */
         .stMarkdown, .stTextInput, .stButton, .stSuccess, .stInfo {
             color: white !important;
         }
-            
+
         h1, h3 {
             color: black !important;
         }
@@ -47,7 +60,7 @@ st.markdown("""
             background-color: #0f172a;
         }
 
-        /* Custom background for analysis result */
+        /* Result output styling */
         .safe {
             background-color: #008000; /* Green */
             padding: 20px;
@@ -63,6 +76,7 @@ st.markdown("""
         }
     </style>
 """, unsafe_allow_html=True)
+
 
 # Title
 st.markdown("<h1 style='text-align: center; font-size: 40px;'>Cyberbullying Detection and Analysis</h1>", unsafe_allow_html=True)
