@@ -74,6 +74,13 @@ st.markdown("""
             border-radius: 8px;
             color: white;
         }
+        .warning {
+            background-color: #1e90ff; /* Dodger blue */
+            padding: 20px;
+            border-radius: 8px;
+            color: white;
+            font-weight: bold;
+        }
     </style>
 """, unsafe_allow_html=True)
 
@@ -91,7 +98,7 @@ analyze_button = st.button("Prediction & Analysis")
 # Logic
 if analyze_button:
     if not sentence.strip():
-        st.error("⚠️ No sentence found!")
+        st.markdown('<div class="warning">⚠️ No sentence found!</div>', unsafe_allow_html=True)
     else:
         output = analyze_cyberbullying(sentence)
         
