@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialDefend.Ai</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="Logo_small.png" type="image/png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Bubble Background Canvas -->
+    <canvas id="bubble-bg" style="position: fixed; z-index: 0; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;"></canvas>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="collapse-btn">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="logo">
+            <div class="logo-img">
+                <img src="Logo.png" alt="Logo" class="main-logo">
+                <img src="logo_small.png" alt="Logo Small" class="small-logo">
+            </div>
+            <h1>SocialDefend.Ai</h1>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="nav-link" id="about-link">
+                <i class="fas fa-info-circle"></i>
+                <span class="nav-text">ABOUT US</span>
+            </a>
+            <a href="#" class="nav-link" id="qr-link">
+                <i class="fab fa-github"></i>
+                <span class="nav-text">GITHUB</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <div class="tag-lines">
+                <div class="toggle-mode">
+                    <i class="fas fa-moon"></i>
+                    <span>TOGGLE MODE</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-container">
+            <div class="headline">
+                <h2>AI-Powered Cyberbullying Analysis</h2>
+                <p>Identifies potential threats and offers context-aware insights to promote safer, more respectful online interactions.</p>
+            </div>
+
+            <div class="try-now-section">
+                <div class="try-now-text">TRY IT NOW</div>
+            </div>
+
+            <div class="input-section">
+                <div class="input-card">
+                    <div class="input-field-container">
+                        <input type="text" class="input-field" placeholder="Enter a sentence to analyze...">
+                    </div>
+                    <button class="analyze-btn">PREDICTION & ANALYSIS</button>
+                </div>
+            </div>
+
+            <div class="results-container" id="results">
+                <div class="results-header">
+                    <h3>Analysis Results</h3>
+                    <span class="confidence">Confidence: 92%</span>
+                </div>
+                <div class="results-content">
+                    <div class="metric">
+                        <div class="metric-name">
+                            <span>Toxicity</span>
+                            <span>0.15</span>
+                        </div>
+                        <div class="metric-bar">
+                            <div class="metric-value" style="width: 15%"></div>
+                        </div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-name">
+                            <span>Hate Speech</span>
+                            <span>0.05</span>
+                        </div>
+                        <div class="metric-bar">
+                            <div class="metric-value" style="width: 5%"></div>
+                        </div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-name">
+                            <span>Spam</span>
+                            <span>0.03</span>
+                        </div>
+                        <div class="metric-bar">
+                            <div class="metric-value" style="width: 3%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- QR Popup -->
+    <div class="qr-popup" id="qr-popup">
+        <div class="qr-content">
+            <h3>Scan QR Code to visit GitHub Repository</h3>
+            <div class="qr-code">
+                <img src="GitHub.png" alt="QR Code">
+                <a href="https://github.com/DeepraMazumder/Cyberbullying-Detection-and-Analysis-in-Social-Media" 
+                   target="_blank" rel="noopener noreferrer">
+                    Or click here to open GitHub
+                </a>
+            </div>
+            <button class="close-qr" id="close-qr">Close</button>
+        </div>
+    </div>
+
+    <!-- About Us Popup -->
+    <div class="about-popup" id="about-popup">
+        <div class="about-content">
+            <h3>ABOUT SocialDefend.Ai</h3>
+            <div class="about-text">
+                <h4>About Us</h4>
+                <p>We are a dedicated platform committed to identifying and addressing harmful online language, promoting respectful digital communication for all.</p>                
+                <h4>What We Do</h4>
+                <p>We analyze user-generated content to detect identity-based harm, flag offensive language and suggest inclusive, respectful alternatives.</p>                
+                <h4>Privacy Commitment</h4>
+                <p>We value user privacy and data security. All content analyzed through our platform is processed with strict confidentiality protocols and we do not store or share personal data.</p>
+            </div>
+            <button class="close-about" id="close-about">Close</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
