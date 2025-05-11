@@ -1,17 +1,15 @@
-INPUT SENTENCE: He's a black African and his son looks like a monkey
+INPUT SENTENCE: His son looks like a dog
 
-CATEGORY: Race/Ethnicity
-TYPE: Identity-based
+CATEGORY: Dissing
+TYPE: Behavioral-based
+SUGGESTED ALTERNATIVES:
+1. His son has unique features.
+2. I don't have an opinion on his son's appearance.
 
 HARMFUL CONTENT IDENTIFICATION:
-⚠️ black
-⚠️ monkey
+⚠️ dog
 
-TOTAL WORDS: 11
-FLAGGED PERCENTAGE: 18% (2 Harmful Words / 11 Total Words)
+TOTAL WORDS: 6
+FLAGGED PERCENTAGE: 17% (1 Harmful Word / 6 Total Words)
 
-REASON:The sentence uses racial slurs to insult someone's appearance, making it a form of cyberbullying that targets race and ethnicity.  The comparison to a monkey is a racist trope.
-
-SUGGESTED ALTERNATIVES:
-1. He and his son have different features.
-2. I noticed a resemblance, but I can see that they're related.
+REASON:The sentence uses a demeaning comparison to insult someone's appearance, which is considered dissing and a form of behavioral-based cyberbullying.
