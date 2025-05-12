@@ -4,6 +4,40 @@ Welcome to our project! This repository powers a web application designed to det
 
 ---
 
+## 🚀 Project Overview
+
+This project uses **Natural Language Processing (NLP)**, **Machine Learning**, and **Deep Learning** techniques to build an intelligent system that:
+
+* Detects cyberbullying from raw text
+* Categorizes content based on bullying type
+* Flags harmful words
+* Provides human-readable justifications and respectful rewordings
+
+We aim to empower users, moderators, and platforms to **promote empathy and reduce toxicity** online.
+
+---
+
+## 🔒 Categories of Cyberbullying Detected
+
+* **Identity-based Cyberbullying**
+  Involves targeting individuals or groups based on inherent personal traits such as:
+
+  * **Race/Ethnicity-related**
+  * **Gender/Sexual-related**
+  * **Religion-related**
+
+* **Behavior-based Cyberbullying**
+  Involves harmful conduct irrespective of personal identity, such as:
+
+  * **Harassment**
+  * **Flaming/Trolling**
+  * **Dissing**
+
+* **Not Cyberbullying**
+  Content that does not fall under the above categories.
+
+---
+
 ## 💡 What Does the Website Do?
 
 Given a user-inputted sentence, the platform:
@@ -17,16 +51,11 @@ Given a user-inputted sentence, the platform:
 
 ---
 
-## 🚀 Project Overview
+## 🧪 Sample Use-Cases
 
-This project uses **Natural Language Processing (NLP)**, **Machine Learning**, and **Deep Learning** techniques to build an intelligent system that:
-
-* Detects cyberbullying from raw text
-* Categorizes content based on bullying type
-* Flags harmful words
-* Provides human-readable justifications and respectful rewordings
-
-We aim to empower users, moderators, and platforms to **promote empathy and reduce toxicity** online.
+* 🔍 Detect abusive or hate speech in online comments
+* 📊 Analyze social media trends around bullying or harassment
+* 🧩 Educational tools to demonstrate the impact of digital abuse
 
 ---
 
@@ -94,33 +123,20 @@ pip install -r requirements.txt
 
 ### ▶️ Running the Project
 
-1. **Run the Web App (Streamlit Interface)**:
-
-   ```bash
-   streamlit run Streamlit.py
-   ```
-
-2. **Run the Flask App**:
+1. **Run the Flask Backend**:
 
    ```bash
    python app.py
    ```
 
+2. **Optional: Run the Streamlit Web App**:
+
+   ```bash
+   streamlit run Streamlit.py
+   ```
+
 3. **Use the Client Notebook**:
    Open `Client.ipynb` in Jupyter Notebook to manually test predictions.
-
----
-
-## 🧠 Model Overview
-
-We trained and evaluated multiple models for classification:
-
-* ✅ **Traditional ML Models**: Naive Bayes, Random Forest, SVM, CatBoost, LightGBM, XGBoost
-* ✅ **Deep Learning**: Fine-tuned BERT for contextual understanding
-* ✅ **Preprocessing**: Tokenization, TF-IDF vectorization, label encoding
-* ✅ **Evaluation**: Accuracy, Precision, Recall, F1-score, Confusion Matrix
-
-Each model is stored in the `Artifacts` directory for easy reuse.
 
 ---
 
@@ -131,35 +147,6 @@ Each model is stored in the `Artifacts` directory for easy reuse.
 * **Precision**: 99.61%
 * **Recall**: 99.83%
 * **F1 Score**: 99.61%
-
----
-
-## 🧪 Sample Use-Cases
-
-* 🔍 Detect abusive or hate speech in online comments
-* 📊 Analyze social media trends around bullying or harassment
-* 🧩 Educational tools to demonstrate the impact of digital abuse
-
----
-
-## 🔒 Categories of Cyberbullying Detected
-
-* **Identity-based Cyberbullying**
-  Involves targeting individuals or groups based on inherent personal traits such as:
-
-  * **Race/Ethnicity-related**
-  * **Gender/Sexual-related**
-  * **Religion-related**
-
-* **Behavior-based Cyberbullying**
-  Involves harmful conduct irrespective of personal identity, such as:
-
-  * **Harassment**
-  * **Flaming/Trolling**
-  * **Dissing**
-
-* **Not Cyberbullying**
-  Content that does not fall under the above categories.
 
 ---
 
