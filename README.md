@@ -1,6 +1,6 @@
 # Cyberbullying Detection and Analysis in Social Media 
 
-Welcome to our project! This repository contains all the essential components for **detecting**, **summarizing**, and **analyzing** potentially harmful or abusive content on social media platforms. By leveraging **Natural Language Processing (NLP)**, **Machine Learning**, and **Deep Learning**, our system aims to foster safer and more respectful digital environments.
+Welcome to our project! This repository contains all the essential components for **detecting**, **summarizing** and **analyzing** potentially harmful or abusive content on social media platforms. By leveraging **Natural Language Processing (NLP)**, **Machine Learning** and **Deep Learning**, our system aims to foster safer and more respectful digital environments.
 
 ---
 
@@ -12,7 +12,7 @@ With the rise of harmful communication online, especially among younger users, i
 * Summarizes content contextually to highlight core sentiment.
 * Provides analytics to better understand the nature of online abuse.
 
-This project integrates **pre-trained BERT models**, **classical ML models**, and **visualization tools** to analyze the context and severity of social media posts.
+This project integrates **pre-trained BERT models**, **classical ML models** and **visualization tools** to analyze the context and severity of social media posts.
 
 ---
 
@@ -87,13 +87,13 @@ We trained and evaluated multiple models for classification:
 * ✅ **Preprocessing**: Tokenization, TF-IDF vectorization, label encoding
 * ✅ **Evaluation**: Accuracy, Precision, Recall, F1-score, Confusion Matrix
 
-Each model is stored in the `Artifacts/` directory for easy reuse.
+Each model is stored in the `Artifacts` directory for easy reuse.
 
 ---
 
 ## 📊 Results and Analysis
 
-* Achieved **high accuracy** on test datasets with BERT outperforming traditional models.
+* Achieved **99.60% accuracy** on test datasets with BERT outperforming traditional models.
 * Extracted **insights on common abusive patterns** using text analysis and visualization.
 * Enabled **real-time classification** with web deployment.
 
@@ -115,4 +115,4 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ## 🤝 Contributions
 
-Contributions are welcome! Feel free to open issues or submit pull requests to improve the model, add features, or enhance performance.
+Contributions are welcome! Feel free to open issues or submit pull requests to improve the model, add features or enhance performance.
