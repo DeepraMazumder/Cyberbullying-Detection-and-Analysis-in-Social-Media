@@ -1,49 +1,82 @@
 # Cyberbullying Detection and Analysis in Social Media 
 
-Welcome to our project! This repository contains all the essential components for **detecting**, **summarizing** and **analyzing** potentially harmful or abusive content on social media platforms. By leveraging **Natural Language Processing (NLP)**, **Machine Learning** and **Deep Learning**, our system aims to foster safer and more respectful digital environments.
+Welcome to our project! This repository powers a web application designed to detect, categorize, and analyze cyberbullying in online text—particularly on social media platforms. It doesn't just identify harmful content; it also provides actionable insights and respectful alternatives to promote a healthier digital conversation space.
+
+---
+
+## 💡 What Does the Website Do?
+
+Given a user-inputted sentence, the platform:
+
+* 🧠 **Detects** whether the text contains cyberbullying.
+* 🏷️ **Classifies** the **type** of bullying (e.g., identity-based or behavior-based).
+* ☠️ **Flags** specific harmful terms in the sentence.
+* 📉 **Calculates** the percentage of harmful content.
+* 💬 **Explains** why the sentence is considered harmful.
+* 🔄 **Suggests Polite Alternatives** for the user to use instead.
 
 ---
 
 ## 🚀 Project Overview
 
-With the rise of harmful communication online, especially among younger users, it's vital to develop tools that automatically identify cyberbullying. Our solution:
+This project uses **Natural Language Processing (NLP)**, **Machine Learning**, and **Deep Learning** techniques to build an intelligent system that:
 
-* Detects and classifies harmful text using various ML & DL models.
-* Summarizes content contextually to highlight core sentiment.
-* Provides analytics to better understand the nature of online abuse.
+* Detects cyberbullying from raw text
+* Categorizes content based on bullying type
+* Flags harmful words
+* Provides human-readable justifications and respectful rewordings
 
-This project integrates **pre-trained BERT models**, **classical ML models** and **visualization tools** to analyze the context and severity of social media posts.
+We aim to empower users, moderators, and platforms to **promote empathy and reduce toxicity** online.
 
 ---
 
-## 📁 Project Structure
+## 📂 Project Structure
 
-```
-Cyberbullying-Detection-and-Analysis-in-Social-Media/
-│
-├── .env, .gitignore, LICENSE, README.md
-├── requirements.txt                # Python dependencies
-│
-├── Analysis.ipynb / Analysis.py    # Text analysis and visualization
-├── Client.ipynb                    # Test client for inference
-├── app.py / Streamlit.py          # Web application code
-│
-├── Artifacts/                      # Trained models and preprocessing tools
-│   ├── FineTunedBERT.keras
-│   ├── TFIDFVectorizer.pkl
-│   ├── LabelEncoder.pkl
-│   ├── *.pkl (ML models - SVM, RandomForest, etc.)
-│
-├── Dataset/                        # Dataset files used for training/testing
-│
-├── Notebooks/                      # Jupyter notebooks for experimentation
-│   ├── Fine-tuning BERT.ipynb
-│   ├── MachineLearning.ipynb
-│   └── helper_prabowo_ml.py
-│
-├── static/                         # Static files for web app
-├── templates/                      # HTML templates for web rendering
-```
+* **Project Root**
+
+  * `.env`, `.gitignore`, `LICENSE`, `README.md`, `requirements.txt`: Configuration and documentation files
+  * `Analysis.ipynb` / `Analysis.py`: Code to perform sentence-level analysis, suggestion generation, and flagging
+  * `Client.ipynb`: Interactive client notebook for testing sentences and model behavior
+  * `app.py`: Flask backend to serve predictions and analysis
+  * `Streamlit.py`: Streamlit app for real-time sentence classification and feedback
+
+* **Artifacts**
+
+  * `CatBoost.pkl`, `LightGBM.pkl`, `XGBoost.pkl`: Gradient boosting-based models for classification
+  * `NaiveBayes.pkl`, `RandomForest.pkl`: Traditional ML models for benchmark comparisons
+  * `SVM-OvO.pkl`, `SVM-OvR.pkl`: Support Vector Machine classifiers (OvO and OvR schemes)
+  * `FineTunedBERT.keras`: BERT-based deep learning model fine-tuned for text classification
+  * `TFIDFVectorizer.pkl`: Vectorizer used to convert text into numerical form
+  * `LabelEncoder.pkl`: Label encoder for transforming target variables
+  * `TrainingHistory.pkl`: Training metrics/logs for deep learning models
+  * `X_train.pkl`, `X_test.pkl`: Serialized train and test datasets
+  * `Analysis.txt`: Log or summary of prediction/flagging outcomes
+  * `__pycache__/`: Auto-generated Python bytecode cache
+
+* **Dataset**
+
+  * `Kaggle.csv`: Original dataset from Kaggle
+  * `KaggleScraped.csv`: Additional scraped content from Kaggle-related sources
+  * `Scraped.csv`: General scraped social media content
+  * `PreprocessedKaggle.csv`, `PreprocessedKaggleScraped.csv`: Cleaned and preprocessed versions for modeling
+
+* **Notebooks**
+
+  * `Fine-tuning BERT.ipynb`: Jupyter notebook for fine-tuning the BERT model
+  * `MachineLearning.ipynb`: Model development using traditional ML approaches
+  * `helper_prabowo_ml.py`: Helper functions and utilities for preprocessing and visualization
+  * `Flowchart.txt`: Workflow design and architecture overview
+  * `catboost_info/`, `__pycache__/`: Additional training logs and cache files
+
+* **static/**
+
+  * `GitHub.png`, `Logo.png`, `Logo_small.png`, `OriginalLogo.jpeg`: Branding and UI assets
+  * `script.js`: JavaScript for front-end interactivity
+  * `styles.css`: Custom styling for the web UI
+
+* **templates/**
+
+  * `index.html`: Main HTML template rendered by Flask frontend
 
 ---
 
@@ -91,11 +124,13 @@ Each model is stored in the `Artifacts` directory for easy reuse.
 
 ---
 
-## 📊 Results and Analysis
+## 🎯 Result
 
-* Achieved **99.60% accuracy** on test datasets with BERT outperforming traditional models.
-* Extracted **insights on common abusive patterns** using text analysis and visualization.
-* Enabled **real-time classification** with web deployment.
+* **Model**: Fine-tuned DistilBERT
+* **Accuracy**: 99.83%
+* **Precision**: 99.61%
+* **Recall**: 99.83%
+* **F1 Score**: 99.61%
 
 ---
 
@@ -107,6 +142,27 @@ Each model is stored in the `Artifacts` directory for easy reuse.
 
 ---
 
+## 🔒 Categories of Cyberbullying Detected
+
+* **Identity-based Cyberbullying**
+  Involves targeting individuals or groups based on inherent personal traits such as:
+
+  * **Race/Ethnicity-related**
+  * **Gender/Sexual-related**
+  * **Religion-related**
+
+* **Behavior-based Cyberbullying**
+  Involves harmful conduct irrespective of personal identity, such as:
+
+  * **Harassment**
+  * **Flaming/Trolling**
+  * **Dissing**
+
+* **Not Cyberbullying**
+  Content that does not fall under the above categories.
+
+---
+
 ## 📜 License
 
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more information.
@@ -115,4 +171,4 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ## 🤝 Contributions
 
-Contributions are welcome! Feel free to open issues or submit pull requests to improve the model, add features or enhance performance.
+Have ideas or improvements? Open an issue or submit a pull request! Contributions, feedback, and collaborations are always welcome.
