@@ -26,5 +26,10 @@ transformers
 joblib
 wget
 
-python-dotenv
-google-generativeai
+# Web and Deployment
+Flask>=2.2.0
+gunicorn>=21.2.0
+
+# Environment and AI APIs
+python-dotenv>=1.0.0
+google-generativeai>=0.3.2
