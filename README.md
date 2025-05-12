@@ -1,40 +1,37 @@
 # Cyberbullying Detection and Analysis in Social Media 
 
-Welcome to our project! This repository powers a web application designed to detect, categorize, and analyze cyberbullying in online text—particularly on social media platforms. It doesn't just identify harmful content; it also provides actionable insights and respectful alternatives to promote a healthier digital conversation space.
+Welcome to our project! This repository powers a web application designed to detect, categorize and analyze cyberbullying in online text — particularly on social media platforms. It doesn't just identify harmful content; it also provides actionable insights and respectful alternatives to promote a healthier digital conversation space.
 
 ---
 
 ## 🚀 Project Overview
 
-This project uses **Natural Language Processing (NLP)**, **Machine Learning**, and **Deep Learning** techniques to build an intelligent system that:
+This project uses **Natural Language Processing (NLP)**, **Machine Learning** and **Deep Learning** techniques to build an intelligent system that:
 
-* Detects cyberbullying from raw text
-* Categorizes content based on bullying type
+* Detects cyberbullying from textual data
+* Categorizes content based on cyberbullying type
 * Flags harmful words
-* Provides human-readable justifications and respectful rewordings
+* Provides human-readable justifications and respectful alternatives
 
-We aim to empower users, moderators, and platforms to **promote empathy and reduce toxicity** online.
+We aim to empower users, moderators and platforms to **promote empathy and reduce toxicity** online.
 
 ---
 
 ## 🔒 Categories of Cyberbullying Detected
 
-* **Identity-based Cyberbullying**
-  Involves targeting individuals or groups based on inherent personal traits such as:
+* **Identity-based Cyberbullying**: Involves targeting individuals or groups based on inherent personal traits such as:
 
   * **Race/Ethnicity-related**
   * **Gender/Sexual-related**
   * **Religion-related**
 
-* **Behavior-based Cyberbullying**
-  Involves harmful conduct irrespective of personal identity, such as:
+* **Behavior-based Cyberbullying**: Involves harmful conduct irrespective of personal identity, such as:
 
   * **Harassment**
   * **Flaming/Trolling**
   * **Dissing**
 
-* **Not Cyberbullying**
-  Content that does not fall under the above categories.
+* **Not Cyberbullying**: Content that does not fall under any harmful category.
 
 ---
 
@@ -43,7 +40,7 @@ We aim to empower users, moderators, and platforms to **promote empathy and redu
 Given a user-inputted sentence, the platform:
 
 * 🧠 **Detects** whether the text contains cyberbullying.
-* 🏷️ **Classifies** the **type** of bullying (e.g., identity-based or behavior-based).
+* 🏷️ **Classifies** the **type** of cyberbullying (e.g., identity-based or behavior-based).
 * ☠️ **Flags** specific harmful terms in the sentence.
 * 📉 **Calculates** the percentage of harmful content.
 * 💬 **Explains** why the sentence is considered harmful.
@@ -64,7 +61,7 @@ Given a user-inputted sentence, the platform:
 * **Project Root**
 
   * `.env`, `.gitignore`, `LICENSE`, `README.md`, `requirements.txt`: Configuration and documentation files
-  * `Analysis.ipynb` / `Analysis.py`: Code to perform sentence-level analysis, suggestion generation, and flagging
+  * `Analysis.ipynb` / `Analysis.py`: Code to perform sentence-level analysis, suggestion generation and flagging
   * `Client.ipynb`: Interactive client notebook for testing sentences and model behavior
   * `app.py`: Flask backend to serve predictions and analysis
   * `Streamlit.py`: Streamlit app for real-time sentence classification and feedback
@@ -77,17 +74,17 @@ Given a user-inputted sentence, the platform:
   * `FineTunedBERT.keras`: BERT-based deep learning model fine-tuned for text classification
   * `TFIDFVectorizer.pkl`: Vectorizer used to convert text into numerical form
   * `LabelEncoder.pkl`: Label encoder for transforming target variables
-  * `TrainingHistory.pkl`: Training metrics/logs for deep learning models
+  * `TrainingHistory.pkl`: Training metrics/logs for the deep learning model
   * `X_train.pkl`, `X_test.pkl`: Serialized train and test datasets
   * `Analysis.txt`: Log or summary of prediction/flagging outcomes
   * `__pycache__/`: Auto-generated Python bytecode cache
 
 * **Dataset**
 
-  * `Kaggle.csv`: Original dataset from Kaggle
-  * `KaggleScraped.csv`: Additional scraped content from Kaggle-related sources
-  * `Scraped.csv`: General scraped social media content
-  * `PreprocessedKaggle.csv`, `PreprocessedKaggleScraped.csv`: Cleaned and preprocessed versions for modeling
+  * `Kaggle.csv`: Original dataset collected from Kaggle.
+  * `Scraped.csv`: Raw scraped social media content from platforms like Discord, Facebook, Instagram, Twitter and YouTube.
+  * `KaggleScraped.csv`: Combined dataset created by merging the Kaggle and scraped data sources.
+  * `PreprocessedKaggle.csv`, `PreprocessedKaggleScraped.csv`: Cleaned and preprocessed versions of the Kaggle and merged datasets, respectively, used for modeling.
 
 * **Notebooks**
 
@@ -158,4 +155,4 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ## 🤝 Contributions
 
-Have ideas or improvements? Open an issue or submit a pull request! Contributions, feedback, and collaborations are always welcome.
+Have ideas or improvements? Open an issue or submit a pull request! Contributions, feedback and collaborations are always welcome.
