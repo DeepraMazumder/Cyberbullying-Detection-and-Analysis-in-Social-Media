@@ -91,7 +91,6 @@ Given a user-inputted sentence, the platform:
   * `MachineLearning.ipynb`: Model development using traditional ML approaches
   * `helper_prabowo_ml.py`: Helper functions and utilities for preprocessing and visualization
   * `Flowchart.txt`: Workflow design and architecture overview
-  * `catboost_info/`, `__pycache__/`: Additional training logs and cache files
 
 * **static/**
 
