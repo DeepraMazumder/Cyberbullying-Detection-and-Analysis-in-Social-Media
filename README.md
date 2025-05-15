@@ -77,7 +77,6 @@ Given a user-inputted sentence, the platform:
   * `TrainingHistory.pkl`: Training metrics/logs for the deep learning model
   * `X_train.pkl`, `X_test.pkl`: Serialized train and test datasets
   * `Analysis.txt`: Log or summary of prediction/flagging outcomes
-  * `__pycache__/`: Auto-generated Python bytecode cache
 
 * **Dataset**
 
