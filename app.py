@@ -31,7 +31,7 @@ def analyze_cyberbullying(text):
         "HARMFUL CONTENT: Display only the individual harmful words from the sentence as a list, each marked with. Do not include phrases, explanations, or additional text;"
         f"TOTAL WORDS: {total_words};"
         "FLAGGED PERCENTAGE: Display the percentage along with the breakdown like this: 20% (Harmful = 2 / Total = 10);"
-        "REASON:  Briefly justify why the message was flagged and its cyberbullying category - no yapping;"
+        "REASON:  Briefly justify in simple language why the message was flagged and its cyberbullying category - no yapping;"
         f"Sentence: {text}"
     )
     
