@@ -60,7 +60,7 @@ Given a user-inputted sentence, the platform:
 
 * **Project Root**
 
-  * `.env`, `.gitignore`, `LICENSE`, `README.md`, `requirements.txt`: Configuration and documentation files
+  * `.gitattributes`, `.gitignore`, `LICENSE`, `README.md`, `Procfile`, `requirements.txt`: Configuration and documentation files
   * `Analysis.ipynb` / `Analysis.py`: Code to perform sentence-level analysis, suggestion generation and flagging
   * `Client.ipynb`: Interactive client notebook for testing sentences and model behavior
   * `app.py`: Flask backend to serve predictions and analysis
